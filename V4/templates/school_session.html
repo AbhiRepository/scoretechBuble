@@ -1,0 +1,16 @@
+{% extends "layout_md_12.html" %}
+{% block content %}
+<a href="#" class="btn btn-outline-info" style="margin-bottom: 5px; width: 200px;">Add another session</a>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{data.sessionName}}</h5>
+        <p class="card-text">Session for Delhi Public School start from {{data.starttime}} to {{data.endtime}} </p>
+        <a href="/school_setup" class="btn btn-outline-info" style="margin: 5px;">Update</a>
+        <a href="#" class="btn btn-outline-info" style="margin: 5px;">Make it current</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

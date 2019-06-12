@@ -1,0 +1,89 @@
+{% extends "layout_md_12.html" %}
+{% block content %}
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Academic Session</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Class, Section and Subject</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Examinations</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Subject Teacher Mapping</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Student Staffs</a>
+  </div>
+</nav>
+
+
+<div class="tab-content" id="nav-tabContent">
+  
+  <!-- First Tab - Content -->
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="content-section">
+      <form>
+        <input type="text" id="session">
+        <input type="text" id="startdate">
+        <input type="text" id="enddate">
+        <button id="submit" onclick="send_data()">submit</button>
+      
+      </form>
+    </div>
+  </div>
+
+  <!-- Second Tab - Content -->
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="container" id="tabSpace">
+      <br>
+      <h4>Select the details of the Class and Section</h4>
+      <!-- <form class="form-inline" id="addStandardform"> -->
+
+        <!-- dropdown for standard -->
+        <select id="newstandard" class="custom-select col-md-2 mr-2" >
+          <option value="13">Nursery</option>
+          <option value="14">LKG</option>
+          <option value="15">UKG</option>
+          <option value="1">Standard I</option>
+          <option value="2">Standard II</option>
+          <option value="3">Standard III</option>
+          <option value="4">Standard IV</option>
+          <option value="5">Standard V</option>
+          <option value="6">Standard VI</option>
+          <option value="7">Standard VII</option>
+          <option value="8">Standard VIII</option>
+          <option value="9">Standard IX</option>
+          <option value="10">Standard X</option>
+          <option value="11">Standard XI</option>
+          <option value="12">Standard XII</option>
+        </select>
+
+        <!-- drop down -->
+        <select id="section" class="custom-select col-md-2 mr-2" >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+
+        <!-- submit button -->
+        <!-- <input type="submit" value="Add Class" class="btn col-md-2" onclick="addStandard()"> -->
+        <button class="btn" id="addStandardform" onclick="addClass()">Add class</button>
+      <!-- </form> -->
+    </div>
+
+    <br>
+
+    <div class="container">
+      <ul id=items class="list-group">
+        <!-- <li class="list-group-item">Class-I<button class="btn-danger float-right delete" style="color: white; border:none;">Remove</button></li> -->
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    eger maximus odio libero, euismod sagittis neque sagittis ac. Nullam euismod eleifend quam quis aliquet. Etiam
+  </div>
+
+
+</div>
+{% endblock %}

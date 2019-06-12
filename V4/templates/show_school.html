@@ -1,0 +1,22 @@
+{% extends "layout_md_12.html" %}
+{% block content %}
+
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ school['school_name']}}</h5>
+    <p class="card-text">Address: {{school['address_line_one']}}, {{school['address_line_two']}}, {{school['city']}}, {{school['state']}}, {{school['pincode']}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+  	<li class="list-group-item">Board: {{ school['board']}} </li>
+    <li class="list-group-item">Number of Student: {{ school['number_of_student']}}</li>
+    <li class="list-group-item">Principal Name: {{ school['principal_name']}}</li>
+    <li class="list-group-item">Owner: {{ school['owner_name']}} </li>
+    <li class="list-group-item">Website : <a href="{{ school['website']}}" class="card-link">{{ school['website']}} </a></li>
+    <li class="list-group-item">
+      <!-- <a href="#" class="btn btn-outline-info float-left">Update</a> -->
+      <a href="/delete_school" class="btn btn-outline-info float-right" style="color: #ba0909; border-color: #ba0909;" onmouseover="this.style.backgroundColor='#ba0909'; this.style.color='#fafafa'" onmouseout="this.style.backgroundColor='#fafafa'; this.style.color='#ba0909'">Delete</a>
+    </li>
+  </ul>
+</div>
+
+{% endblock %}
