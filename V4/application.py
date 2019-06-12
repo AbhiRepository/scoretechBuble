@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request, session, logging, jsonify
 from forms import RegistrationForm, LoginForm, OTPForm, ForgotForm, ResetForm, AddSchoolForm, EmailRegistrationForm
 from passlib.hash import sha256_crypt
-from flask_mysqldb import MySQL
+from flaskext.mysql import MySQL
 from functools import wraps
 from flask_wtf import CSRFProtect
 
